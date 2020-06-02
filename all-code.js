@@ -1,7 +1,16 @@
 // const vs. let, and older browsers, and [js].
+// Also: node in terminal, for illustration
 
 const maxAPI = require("max-api");
 const _ = require("lodash");
+const dfns = require("date-fns");
+
+const end_of_transition = new Date(2021, 1, 1);
+
+maxAPI.addHandler("bang", () => {
+    // Show this one in the terminal first:
+    maxAPI.outlet(dfns.intervalToDuration({start: Date.now(), end: end_of_transition}));
+});
 
 // Dictionary test (input), just because:
 
