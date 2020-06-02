@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 60.0, 112.0, 989.0, 659.0 ],
+		"rect" : [ 302.0, 137.0, 989.0, 659.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,41 @@
 		"subpatcher_template" : "cassiel",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-37",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 328.0, 130.0, 150.0, 18.0 ],
+					"text" : "https://lodash.com/"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-32",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 150.0, 108.0, 328.0, 18.0 ],
+					"text" : "https://github.com/tmhglnd/total-serialism"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 180.0, 165.0, 253.0, 20.0 ],
+					"presentation_linecount" : 2,
+					"text" : "script npm install total-serialism"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-40",
 					"maxclass" : "message",
@@ -207,7 +242,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 45.0, 320.0, 400.0, 220.0 ],
+					"patching_rect" : [ 45.0, 320.0, 270.0, 315.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -259,8 +294,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -396,7 +429,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 360.0, 215.0, 24.0, 24.0 ]
+					"patching_rect" : [ 465.0, 298.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -408,7 +441,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 330.0, 115.0, 24.0, 24.0 ]
+					"patching_rect" : [ 435.0, 198.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -419,7 +452,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_gl_texture", "bang", "" ],
-					"patching_rect" : [ 330.0, 170.0, 73.0, 20.0 ],
+					"patching_rect" : [ 435.0, 253.0, 73.0, 20.0 ],
 					"text" : "jit.world"
 				}
 
@@ -527,6 +560,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-23", 0 ]
 				}
 
 			}
@@ -660,7 +700,6 @@
 		"styles" : [ 			{
 				"name" : "cassiel",
 				"default" : 				{
-					"fontname" : [ "Courier" ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -670,10 +709,11 @@
 						"proportion" : 0.39
 					}
 ,
-					"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
-					"locked_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 					"textcolor" : [ 0.646639, 0.821777, 0.854593, 1.0 ],
-					"editing_bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+					"editing_bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+					"fontname" : [ "Courier" ],
+					"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
+					"locked_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
