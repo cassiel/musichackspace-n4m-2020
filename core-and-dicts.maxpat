@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 280.0, 171.0, 962.0, 683.0 ],
+		"rect" : [ 473.0, 1043.0, 797.0, 668.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -19,7 +19,7 @@
 		"gridonopen" : 2,
 		"gridsize" : [ 15.0, 5.0 ],
 		"gridsnaponopen" : 2,
-		"objectsnaponopen" : 1,
+		"objectsnaponopen" : 0,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
 		"lefttoolbarpinned" : 0,
@@ -57,7 +57,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 315.0, 140.0, 203.0, 20.0 ],
+					"patching_rect" : [ 435.0, 180.0, 203.0, 20.0 ],
 					"text" : "script npm install date-fns"
 				}
 
@@ -68,7 +68,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 405.0, 170.0, 195.0, 18.0 ],
+					"patching_rect" : [ 465.0, 220.0, 195.0, 18.0 ],
 					"text" : "https://date-fns.org/"
 				}
 
@@ -210,8 +210,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -321,6 +319,11 @@
 		"styles" : [ 			{
 				"name" : "cassiel",
 				"default" : 				{
+					"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
+					"editing_bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+					"textcolor" : [ 0.646639, 0.821777, 0.854593, 1.0 ],
+					"locked_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+					"fontname" : [ "Courier" ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -329,12 +332,7 @@
 						"angle" : 270.0,
 						"proportion" : 0.39
 					}
-,
-					"fontname" : [ "Courier" ],
-					"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
-					"locked_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
-					"editing_bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
-					"textcolor" : [ 0.646639, 0.821777, 0.854593, 1.0 ]
+
 				}
 ,
 				"parentstyle" : "",

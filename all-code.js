@@ -20,8 +20,9 @@ maxAPI.addHandler(maxAPI.MESSAGE_TYPES.DICT, (d) => {
 
 // Simple examples with lists and functional programming:
 
-maxAPI.addHandler(maxAPI.MESSAGE_TYPES.LIST, (l) => {
-    maxAPI.output(l);
+maxAPI.addHandler(maxAPI.MESSAGE_TYPES.LIST, (...l) => {
+    let l2 = l.map(x => x * x);
+    maxAPI.outlet("squares", l2); // "squares" * dict!
 });
 
 // Positions dictionary output:
