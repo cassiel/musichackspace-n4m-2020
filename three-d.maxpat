@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 602.0, 115.0, 712.0, 659.0 ],
+		"rect" : [ 278.0, 95.0, 1063.0, 649.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 60.0, 40.0, 73.0, 20.0 ],
+					"text" : "positions"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-37",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -57,18 +69,6 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 150.0, 108.0, 328.0, 18.0 ],
 					"text" : "https://github.com/tmhglnd/total-serialism"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-23",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 180.0, 165.0, 253.0, 20.0 ],
-					"text" : "script npm install total-serialism"
 				}
 
 			}
@@ -158,47 +158,11 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-24",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 135.0, 30.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"data" : 					{
-						"red" : 1,
-						"blue" : 9,
-						"green" : -44
-					}
-,
-					"id" : "obj-19",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 4,
-					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 135.0, 75.0, 117.0, 20.0 ],
-					"saved_object_attributes" : 					{
-						"embed" : 1,
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0
-					}
-,
-					"text" : "dict X @embed 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-22",
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 495.0, 450.0, 210.0, 190.0 ]
+					"patching_rect" : [ 495.0, 411.0, 210.0, 190.0 ]
 				}
 
 			}
@@ -241,7 +205,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 45.0, 320.0, 400.0, 220.0 ],
+					"patching_rect" : [ 45.0, 385.0, 400.0, 220.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -272,24 +236,12 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-12",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 45.0, 210.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 45.0, 255.0, 174.0, 20.0 ],
+					"patching_rect" : [ 45.0, 255.0, 167.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
@@ -298,7 +250,7 @@
 						"watch" : 0
 					}
 ,
-					"text" : "node.script all-code.js"
+					"text" : "node.script three-d.js"
 				}
 
 			}
@@ -480,15 +432,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"source" : [ "obj-11", 0 ]
+					"destination" : [ "obj-8", 2 ],
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-12", 0 ]
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -561,20 +513,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-20", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-23", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
-					"source" : [ "obj-24", 0 ]
 				}
 
 			}
@@ -672,8 +610,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "all-code.js",
-				"bootpath" : "~/GITHUB/cassiel/musichackspace-n4m-2020/fun-prog",
+				"name" : "three-d.js",
+				"bootpath" : "~/GITHUB/cassiel/musichackspace-n4m-2020",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
@@ -702,8 +640,8 @@
 				"name" : "cassiel",
 				"default" : 				{
 					"textcolor" : [ 0.646639, 0.821777, 0.854593, 1.0 ],
-					"locked_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 					"editing_bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+					"locked_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 					"fontname" : [ "Courier" ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
