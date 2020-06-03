@@ -15,7 +15,7 @@ maxAPI.addHandler("bang", () => {
 // Dictionary test (input), just because:
 
 maxAPI.addHandler(maxAPI.MESSAGE_TYPES.DICT, (d) => {
-        maxAPI.post("dictionary!: " + d.red);
+    maxAPI.post("dictionary!: " + d.red);
 });
 
 // Simple examples with lists and functional programming:
