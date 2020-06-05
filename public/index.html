@@ -1,0 +1,15 @@
+<HTML>
+    <BODY>
+        <H1>Hello World</H1>
+
+        <SCRIPT>
+            let exampleSocket = new WebSocket("ws://localhost:7474");
+
+            exampleSocket.onmessage = (event) => {
+                console.debug("Message in!", event);
+                let e = JSON.parse(event.data);
+            };
+
+        </SCRIPT>
+    </BODY>
+</HTML>
