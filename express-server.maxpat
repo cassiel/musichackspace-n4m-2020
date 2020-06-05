@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 490.0, 265.0, 771.0, 479.0 ],
+		"rect" : [ 543.0, 179.0, 771.0, 479.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,14 +40,50 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"format" : 6,
-					"id" : "obj-13",
-					"maxclass" : "flonum",
+					"id" : "obj-21",
+					"maxclass" : "number",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 150.0, 235.0, 50.0, 20.0 ]
+					"patching_rect" : [ 195.0, 45.0, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 135.0, 45.0, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 75.0, 45.0, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 435.0, 165.0, 289.0, 32.0 ],
+					"text" : ";\rmax launchbrowser http://localhost:9090"
 				}
 
 			}
@@ -58,8 +94,8 @@
 					"numinlets" : 4,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 120.0, 275.0, 131.0, 20.0 ],
-					"text" : "pak send 0. 0. 0."
+					"patching_rect" : [ 60.0, 110.0, 109.0, 20.0 ],
+					"text" : "pak send 0 0 0"
 				}
 
 			}
@@ -70,7 +106,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 315.0, 40.0, 160.0, 20.0 ],
+					"patching_rect" : [ 585.0, 25.0, 160.0, 20.0 ],
 					"text" : "script npm install ws"
 				}
 
@@ -82,7 +118,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 105.0, 40.0, 196.0, 20.0 ],
+					"patching_rect" : [ 375.0, 25.0, 196.0, 20.0 ],
 					"text" : "script npm install express"
 				}
 
@@ -94,7 +130,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 345.0, 85.0, 88.0, 20.0 ],
+					"patching_rect" : [ 615.0, 70.0, 88.0, 20.0 ],
 					"text" : "script stop"
 				}
 
@@ -106,7 +142,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 225.0, 85.0, 95.0, 20.0 ],
+					"patching_rect" : [ 495.0, 70.0, 95.0, 20.0 ],
 					"text" : "script start"
 				}
 
@@ -138,7 +174,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 45.0, 155.0, 282.0, 20.0 ],
+					"patching_rect" : [ 30.0, 335.0, 282.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
@@ -176,7 +212,21 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 1 ],
-					"source" : [ "obj-13", 0 ]
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 2 ],
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 3 ],
+					"source" : [ "obj-21", 0 ]
 				}
 
 			}

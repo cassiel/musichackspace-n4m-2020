@@ -6,31 +6,24 @@ const WebSocket = require("ws");
 
 let app = express();
 
-/*
-app.get("/", (req, res) => {
-    res.send("Hello Max World!");
-});
-*/
-
 app.use(express.static('public'));
 
 const port = 9090;
 
-app.listen(port, function listening() {
+app.listen(port, () => {
     console.log(`Listening on ${port}`);
 });
 
 const wss = new WebSocket.Server({ port: 7474 });
 
-wss.on("connection", function connection(ws, req) {
-    ws.on("message", function incoming(message) {
+wss.on("connection", (ws, req) => {
+    ws.on("message", (message) => {
 	console.log("received: %s", message);
     });
 
-    ws.on("close", function stop() {
-	Max.removeHandlers("send");
+    ws.on("close", () => {
+	maxAPI.removeHandlers("send");
 	console.log("Connection closed");
-
 	ws.terminate();
     });
 
@@ -38,9 +31,9 @@ wss.on("connection", function connection(ws, req) {
 	console.log("send args: " + args);
 	if (args.length === 3) {
             ws.send(JSON.stringify({
-	        "value_1": args[0],
-	        "value_2": args[1],
-	        "value_3": args[2]
+	        "R": args[0],
+	        "G": args[1],
+	        "B": args[2]
 	    }));
 	}
     });
