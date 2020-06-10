@@ -7,6 +7,11 @@ const maxAPI = require("max-api");
 const dfns = require("date-fns");
 
 // Simple examples with lists and functional programming:
+// (Javascript pretty agnostic about ints vs floats; node.script
+// seems more clever about tagging its output)
+maxAPI.addHandler("number", (i) => {
+    maxAPI.outlet(-i);
+})
 
 maxAPI.addHandler("list", (...l) => {
     // 1. Start with simple example of list output, then do dict stuff.
@@ -14,7 +19,8 @@ maxAPI.addHandler("list", (...l) => {
     maxAPI.outlet("squares", l2); // "squares" * dict!
 });
 
-let end_of_transition = new Date(2021, 1, 1);
+// We can actually get by with "const" almost everywhere.
+const end_of_transition = new Date(2021, 1, 1);
 
 maxAPI.addHandler("bang", () => {
     // 2. Libraries and dictionary output.
