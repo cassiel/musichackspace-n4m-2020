@@ -6,11 +6,11 @@ const _ = require("lodash");
 
 // Positions dictionary output:
 
-maxAPI.addHandler("positions", () => {
-    let myDict = {positions: {xs: _.range(100).map((x) => x / 100),
-                              ys: _.range(100).map((x) => 0),
-                              zs: _.range(100).map((x) => x % 10)
-                             }
+maxAPI.addHandler("bang", () => {
+    let L = _.range(100);
+    let myDict = {xs: L.map((x) => Math.cos(x)),
+                  ys: L.map((x) => Math.sin(x)),
+                  zs: L.map((x) => x / 100)
                  };
 
     maxAPI.outlet(myDict);
