@@ -28,15 +28,4 @@ wss.on("connection", (ws, req) => {
 		console.log("Connection closed");
 		ws.terminate();
     });
-
-    maxAPI.addHandler("send", (...args) => {
-		console.log("send args: " + args);
-		if (args.length === 3) {
-	            ws.send(JSON.stringify({
-                    "R": args[0],
-		            "G": args[1],
-		            "B": args[2]
-		    }));
-		}
-    });
 });
