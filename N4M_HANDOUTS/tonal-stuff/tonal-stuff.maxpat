@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 589.0, 1084.0, 771.0, 479.0 ],
+		"rect" : [ 255.0, 79.0, 630.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,77 +40,37 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"format" : 6,
-					"id" : "obj-13",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 510.0, 40.0, 50.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"format" : 6,
-					"id" : "obj-11",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 450.0, 40.0, 50.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"format" : 6,
-					"id" : "obj-7",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 390.0, 40.0, 50.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 4,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 390.0, 80.0, 131.0, 20.0 ],
-					"text" : "pak send 0. 0. 0."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-15",
-					"linecount" : 2,
+					"id" : "obj-22",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 435.0, 165.0, 289.0, 32.0 ],
-					"text" : ";\rmax launchbrowser http://localhost:9090"
+					"patching_rect" : [ 180.0, 45.0, 189.0, 20.0 ],
+					"text" : "script npm install lodash"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 210.0, 75.0, 246.0, 20.0 ],
+					"text" : "script npm install @tonaljs/tonal"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-10",
-					"maxclass" : "message",
-					"numinlets" : 2,
+					"maxclass" : "button",
+					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 105.0, 55.0, 160.0, 20.0 ],
-					"text" : "script npm install ws"
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 45.0, 70.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -121,19 +81,19 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 105.0, 15.0, 196.0, 20.0 ],
-					"text" : "script npm install express"
+					"patching_rect" : [ 165.0, 15.0, 297.0, 20.0 ],
+					"text" : "script npm install @tonaljs/chord-detect"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-6",
+					"id" : "obj-5",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 105.0, 135.0, 88.0, 20.0 ],
+					"patching_rect" : [ 285.0, 175.0, 88.0, 20.0 ],
 					"text" : "script stop"
 				}
 
@@ -145,7 +105,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 105.0, 95.0, 95.0, 20.0 ],
+					"patching_rect" : [ 270.0, 150.0, 95.0, 20.0 ],
 					"text" : "script start"
 				}
 
@@ -165,7 +125,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 330.0, 245.0, 400.0, 220.0 ],
+					"patching_rect" : [ 135.0, 445.0, 400.0, 220.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -177,7 +137,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 60.0, 185.0, 282.0, 20.0 ],
+					"patching_rect" : [ 135.0, 395.0, 261.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
@@ -186,7 +146,7 @@
 						"watch" : 1
 					}
 ,
-					"text" : "node.script express-server.js @watch 1"
+					"text" : "node.script tonal-stuff.js @watch 1"
 				}
 
 			}
@@ -194,6 +154,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
+					"midpoints" : [ 386.5, 429.0, 144.5, 429.0 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -201,36 +162,27 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 114.5, 85.0, 69.5, 85.0 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 2 ],
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 3 ],
-					"source" : [ "obj-13", 0 ]
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-20", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-3", 0 ]
+					"source" : [ "obj-22", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 114.5, 124.0, 69.5, 124.0 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -238,30 +190,21 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 114.5, 172.5, 69.5, 172.5 ],
-					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 1 ],
-					"source" : [ "obj-7", 0 ]
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 114.5, 42.5, 69.5, 42.5 ],
 					"source" : [ "obj-8", 0 ]
 				}
 
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "express-server.js",
-				"bootpath" : "~/GITHUB/cassiel/musichackspace-n4m-2020/express-server/HANDOUT/express-server",
+				"name" : "tonal-stuff.js",
+				"bootpath" : "~/GITHUB/cassiel/musichackspace-n4m-2020/HANDOUTS/tonal-stuff",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
@@ -289,11 +232,9 @@
 		"styles" : [ 			{
 				"name" : "cassiel",
 				"default" : 				{
-					"textcolor" : [ 0.646639, 0.821777, 0.854593, 1.0 ],
-					"editing_bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
-					"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
-					"fontname" : [ "Courier" ],
 					"locked_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+					"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
+					"textcolor" : [ 0.646639, 0.821777, 0.854593, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -302,13 +243,17 @@
 						"angle" : 270.0,
 						"proportion" : 0.39
 					}
-
+,
+					"editing_bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+					"fontname" : [ "Courier" ]
 				}
 ,
 				"parentstyle" : "",
 				"multi" : 0
 			}
- ]
+ ],
+		"bgcolor" : [ 0.717647058823529, 0.709803921568627, 0.709803921568627, 1.0 ],
+		"editing_bgcolor" : [ 0.866666666666667, 0.858823529411765, 0.858823529411765, 1.0 ]
 	}
 
 }
