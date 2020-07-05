@@ -10,11 +10,7 @@
             let exampleSocket = new WebSocket("ws://localhost:7474");
 
             exampleSocket.onmessage = (event) => {
-                console.debug("Message in!", event);
-                let e = JSON.parse(event.data);
-                colour = `rgb(${e.R}, ${e.G}, ${e.B})`;
-                console.log(colour);
-                $("H1").css("color", colour);
+                // Do sopmething here...
             };
 
         </SCRIPT>

@@ -8,35 +8,31 @@ const WebSocket = require("ws");		// Web socket support
 
 let app = express();
 
+// Serve HTML files from the "public" directory:
 app.use(express.static('public'));
 
 const port = 9090;
 
+// Start the web server:
 app.listen(port, () => {
     console.log(`Listening on ${port}`);
 });
 
+// Separately, create and start the socket server:
 const wss = new WebSocket.Server({ port: 7474 });
 
-wss.on("connection", (ws, req) => {
+wss.on("connection", (ws, req) => {		//	When the client connects...
+	// Messages in from the client:
 	ws.on("message", (message) => {
 		console.log("received: %s", message);
     });
 
+	// Clean up when client disconnects:
 	ws.on("close", () => {
 		maxAPI.removeHandlers("send");
 		console.log("Connection closed");
 		ws.terminate();
-    });
-
-    maxAPI.addHandler("send", (...args) => {
-		console.log("send args: " + args);
-		if (args.length === 3) {
-	            ws.send(JSON.stringify({
-                    "R": args[0],
-		            "G": args[1],
-		            "B": args[2]
-		    }));
-		}
-    });
+	});
+	
+	// Connect up to Max here: [...]
 });
