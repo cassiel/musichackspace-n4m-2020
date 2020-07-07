@@ -35,4 +35,16 @@ wss.on("connection", (ws, req) => {		//	When the client connects...
 	});
 	
 	// Connect up to Max here: [...]
+
+	// (Note: "colour" will be ignored until we get a client connection.)
+	maxAPI.addHandler("colour", (...args) => {
+		console.log("colour args: " + args);
+		if (args.length === 3) {
+	            ws.send(JSON.stringify({
+                    "R": args[0],
+		            "G": args[1],
+		            "B": args[2]
+		    }));
+		}
+    });
 });

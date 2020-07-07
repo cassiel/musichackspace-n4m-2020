@@ -10,18 +10,23 @@
             let exampleSocket = new WebSocket("ws://localhost:7474");
 
             exampleSocket.onmessage = (event) => {
-                // Do something here...
+                console.debug("Message in!", event);
+                let e = JSON.parse(event.data);
+                colour = `rgb(${e.R}, ${e.G}, ${e.B})`;
+                console.log(colour);
+                $("H1").css("color", colour);
             };
 
         </SCRIPT>
 
         <OL>
-
+            <!-- Append players here... -->
         </OL>
 
         <BUTTON ID="btn1">Append item</BUTTON>
 
         <SCRIPT>
+            // Here's a manual add via button, with bogus file name:
             let filename = "goo.wav";
             $("#btn1").click(() => {
                 $("OL").append(`
