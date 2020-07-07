@@ -24,7 +24,8 @@ const wss = new WebSocket.Server({ port: 7474 });
 wss.on("connection", (ws, req) => {		//	When the client connects...
 	// Messages in from the client:
 	ws.on("message", (message) => {
-		console.log("received: %s", message);
+		console.log("received: %s", message);		// Not message.data.
+		maxAPI.outlet("generate");
     });
 
 	// Clean up when client disconnects:
@@ -56,11 +57,10 @@ wss.on("connection", (ws, req) => {		//	When the client connects...
 		}))
 	})
 	
-	maxAPI.addHandler("release", (filename, id) => {
+	maxAPI.addHandler("release", (filename) => {
 		ws.send(JSON.stringify({
 			"type" : "audiofile",
-			"filename" : filename,
-			"id" : id
+			"filename" : filename
 		}))
 	})
 });

@@ -24,14 +24,10 @@
                 } else if (e.type === "audiofile") {
                     $("OL").append(`
                         <H3>${e.filename}</H3>
-                        <AUDIO ID=${e.id} CONTROLS>
+                        <AUDIO CONTROLS>
                             <SOURCE SRC="${e.filename}" TYPE="audio/wav">
                         </AUDIO>
                     `);
-                    $(`#goo`)[0].addEventListener("play", () => {
-                        // [0] to get raw DOM element. Note: only seems to fire "play" once.
-                        console.log("PLAYING");
-                    });
                 }
             };
 
@@ -42,6 +38,8 @@
         </OL>
 
         <BUTTON ID="btn1">Append item</BUTTON>
+        <BUTTON ID="btn2">Generate track</BUTTON>
+        
 
         <SCRIPT>
             // Here's a manual add via button, with bogus file name:
@@ -53,6 +51,11 @@
                         <SOURCE SRC="${filename}" TYPE="audio/wav">
                     </AUDIO>
                 `)
+            });
+
+            // Do this bit before JSON the other way?
+            $("#btn2").click(() => {
+                exampleSocket.send("generate");
             });
         </SCRIPT>
     </BODY>
