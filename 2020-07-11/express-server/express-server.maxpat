@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 343.0, 184.0, 841.0, 563.0 ],
+		"rect" : [ 248.0, 182.0, 841.0, 563.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,76 @@
 		"subpatcher_template" : "cassiel",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"bgcolor" : [ 0.394356, 0.149215, 0.067687, 1.0 ],
+					"bgcolor2" : [ 0.394356, 0.149215, 0.067687, 1.0 ],
+					"bgfillcolor_angle" : 270.0,
+					"bgfillcolor_autogradient" : 0.0,
+					"bgfillcolor_color" : [ 0.394356, 0.149215, 0.067687, 1.0 ],
+					"bgfillcolor_color1" : [ 0.394356, 0.149215, 0.067687, 1.0 ],
+					"bgfillcolor_color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+					"bgfillcolor_proportion" : 0.39,
+					"bgfillcolor_type" : "color",
+					"gradient" : 1,
+					"id" : "obj-22",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 465.0, 170.0, 88.0, 20.0 ],
+					"text" : "reload 3000"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.070206, 0.377472, 0.521117, 0.6 ],
+					"id" : "obj-20",
+					"linecount" : 5,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 630.0, 175.0, 153.0, 66.0 ],
+					"style" : "c.comment",
+					"text" : "(Won't work immediately if script is reloaded, since there's no web socket in place!)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+					"bgcolor2" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+					"bgfillcolor_angle" : 270.0,
+					"bgfillcolor_autogradient" : 0.0,
+					"bgfillcolor_color" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+					"bgfillcolor_color1" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+					"bgfillcolor_color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+					"bgfillcolor_proportion" : 0.39,
+					"bgfillcolor_type" : "color",
+					"gradient" : 1,
+					"id" : "obj-18",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 510.0, 200.0, 66.0, 20.0 ],
+					"text" : "reload 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 420.0, 115.0, 145.0, 20.0 ],
+					"text" : "release goo.wav goo"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"format" : 6,
 					"id" : "obj-13",
@@ -108,8 +178,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 135.0, 340.0, 181.0, 20.0 ],
-					"text" : "open public/goo.wav wave"
+					"patching_rect" : [ 135.0, 340.0, 131.0, 20.0 ],
+					"text" : "open goo.wav wave"
 				}
 
 			}
@@ -133,7 +203,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 435.0, 165.0, 289.0, 32.0 ],
+					"patching_rect" : [ 510.0, 245.0, 289.0, 32.0 ],
 					"text" : ";\rmax launchbrowser http://localhost:9090"
 				}
 
@@ -201,7 +271,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 330.0, 245.0, 400.0, 220.0 ],
+					"patching_rect" : [ 405.0, 290.0, 400.0, 220.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -217,6 +287,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
@@ -263,8 +335,29 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-22", 0 ]
 				}
 
 			}
@@ -335,6 +428,11 @@
  ],
 		"autosave" : 0,
 		"styles" : [ 			{
+				"name" : "c.comment",
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
 				"name" : "cassiel",
 				"default" : 				{
 					"locked_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],

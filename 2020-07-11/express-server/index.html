@@ -12,9 +12,27 @@
             exampleSocket.onmessage = (event) => {
                 console.debug("Message in!", event);
                 let e = JSON.parse(event.data);
-                colour = `rgb(${e.R}, ${e.G}, ${e.B})`;
-                console.log(colour);
-                $("H1").css("color", colour);
+
+                if (e.type === "reload") {
+                    let msec = e.msec;
+                    console.log(`Reloading in ${msec}...`);
+                    setTimeout(() => location.reload(), msec);
+                } else if (e.type === "colour") {
+                    let colour = `rgb(${e.R}, ${e.G}, ${e.B})`;
+                    console.log(colour);
+                    $("H1").css("color", colour);
+                } else if (e.type === "audiofile") {
+                    $("OL").append(`
+                        <H3>${e.filename}</H3>
+                        <AUDIO ID=${e.id} CONTROLS>
+                            <SOURCE SRC="${e.filename}" TYPE="audio/wav">
+                        </AUDIO>
+                    `);
+                    $(`#goo`)[0].addEventListener("play", () => {
+                        // [0] to get raw DOM element. Note: only seems to fire "play" once.
+                        console.log("PLAYING");
+                    });
+                }
             };
 
         </SCRIPT>

@@ -41,10 +41,26 @@ wss.on("connection", (ws, req) => {		//	When the client connects...
 		console.log("colour args: " + args);
 		if (args.length === 3) {
 	            ws.send(JSON.stringify({
-                    "R": args[0],
-		            "G": args[1],
-		            "B": args[2]
+					"type" : "colour",		// Add this once we need to distinguish message types.
+	                "R" : args[0],
+			        "G" : args[1],
+					"B" : args[2]
 		    }));
 		}
-    });
+	});
+
+	maxAPI.addHandler("reload", (msec) => {
+		ws.send(JSON.stringify({
+			"type" : "reload",
+			"msec" : msec
+		}))
+	})
+	
+	maxAPI.addHandler("release", (filename, id) => {
+		ws.send(JSON.stringify({
+			"type" : "audiofile",
+			"filename" : filename,
+			"id" : id
+		}))
+	})
 });
