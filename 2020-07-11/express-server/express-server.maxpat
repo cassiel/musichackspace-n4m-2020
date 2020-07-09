@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 251.0, 110.0, 829.0, 737.0 ],
+		"rect" : [ 430.0, 101.0, 873.0, 715.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,69 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-34",
-					"maxclass" : "number",
+					"id" : "obj-37",
+					"maxclass" : "toggle",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 90.0, 455.0, 50.0, 20.0 ]
+					"patching_rect" : [ 180.0, 490.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 20.0,
+					"id" : "obj-14",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 585.0, 80.0, 31.0, 26.0 ],
+					"text" : "2",
+					"textcolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.0, 0.078431, 0.321569, 0.2 ],
+					"id" : "obj-23",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 615.0, 80.0, 153.0, 18.0 ],
+					"style" : "cassiel-comment-20200709",
+					"text" : "Message to web page",
+					"textcolor" : [ 0.086275, 0.309804, 0.52549, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 20.0,
+					"id" : "obj-9",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 210.0, 300.0, 31.0, 26.0 ],
+					"text" : "3",
+					"textcolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.0, 0.078431, 0.321569, 0.2 ],
+					"id" : "obj-12",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 240.0, 300.0, 153.0, 18.0 ],
+					"style" : "c.blue-comment-1",
+					"text" : "Create a track",
+					"textcolor" : [ 0.086275, 0.309804, 0.52549, 1.0 ]
 				}
 
 			}
@@ -71,20 +127,22 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 75.0, 630.0, 31.0, 26.0 ],
-					"text" : "2",
+					"text" : "4",
 					"textcolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.0, 0.078431, 0.321569, 0.2 ],
 					"id" : "obj-31",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 105.0, 630.0, 153.0, 18.0 ],
 					"style" : "c.blue-comment-1",
-					"text" : "Release a track"
+					"text" : "Release a track",
+					"textcolor" : [ 0.086275, 0.309804, 0.52549, 1.0 ]
 				}
 
 			}
@@ -96,7 +154,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 120.0, 250.0, 31.0, 26.0 ],
+					"patching_rect" : [ 165.0, 220.0, 31.0, 26.0 ],
 					"text" : "1",
 					"textcolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ]
 				}
@@ -104,14 +162,16 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.0, 0.078431, 0.321569, 0.2 ],
 					"id" : "obj-16",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 150.0, 250.0, 150.0, 30.0 ],
+					"patching_rect" : [ 195.0, 220.0, 153.0, 30.0 ],
 					"style" : "c.blue-comment-1",
-					"text" : "Message in from web page button"
+					"text" : "Message in from web page button",
+					"textcolor" : [ 0.086275, 0.309804, 0.52549, 1.0 ]
 				}
 
 			}
@@ -218,7 +278,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 45.0, 335.0, 59.0, 20.0 ],
+					"patching_rect" : [ 60.0, 335.0, 59.0, 20.0 ],
 					"text" : "del 250"
 				}
 
@@ -321,14 +381,16 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.0, 0.078431, 0.321569, 0.2 ],
 					"id" : "obj-20",
 					"linecount" : 5,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 630.0, 175.0, 167.0, 66.0 ],
-					"style" : "c.blue-comment-1",
-					"text" : "(Won't work immediately if script is reloaded, since there's no web socket in place!)"
+					"patching_rect" : [ 585.0, 155.0, 167.0, 66.0 ],
+					"style" : "cassiel-comment-20200709",
+					"text" : "(Won't work immediately if script is reloaded, since there's no web socket in place!)",
+					"textcolor" : [ 0.086275, 0.309804, 0.52549, 1.0 ]
 				}
 
 			}
@@ -509,6 +571,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
@@ -660,22 +724,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
-					"order" : 0,
-					"source" : [ "obj-34", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"order" : 1,
-					"source" : [ "obj-34", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-32", 0 ],
 					"source" : [ "obj-35", 1 ]
 				}
@@ -706,6 +754,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"order" : 0,
+					"source" : [ "obj-37", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"order" : 1,
+					"source" : [ "obj-37", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-40", 0 ],
 					"source" : [ "obj-38", 0 ]
 				}
@@ -713,7 +777,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-34", 0 ],
+					"destination" : [ "obj-37", 0 ],
 					"source" : [ "obj-39", 0 ]
 				}
 
@@ -750,7 +814,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-34", 0 ],
+					"destination" : [ "obj-37", 0 ],
 					"order" : 0,
 					"source" : [ "obj-43", 0 ]
 				}
@@ -851,11 +915,7 @@
 , 			{
 				"name" : "cassiel",
 				"default" : 				{
-					"locked_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
-					"editing_bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
-					"textcolor" : [ 0.646639, 0.821777, 0.854593, 1.0 ],
 					"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
-					"fontname" : [ "Courier" ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -864,9 +924,18 @@
 						"angle" : 270.0,
 						"proportion" : 0.39
 					}
-
+,
+					"fontname" : [ "Courier" ],
+					"locked_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+					"textcolor" : [ 0.646639, 0.821777, 0.854593, 1.0 ],
+					"editing_bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 				}
 ,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "cassiel-comment-20200709",
 				"parentstyle" : "",
 				"multi" : 0
 			}
