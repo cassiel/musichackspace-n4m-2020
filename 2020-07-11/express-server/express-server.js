@@ -8,7 +8,7 @@ const WebSocket = require("ws");		// Web socket support
 
 let app = express();
 
-// Serve HTML files from the default directory:
+// Serve HTML (and other) files from the default directory:
 app.use(express.static(__dirname));
 
 const port = 9090;
