@@ -22,21 +22,22 @@ app.listen(port, () => {
 const wss = new WebSocket.Server({ port: 7474 });
 
 wss.on("connection", (ws, req) => {		//	When the client connects...
-	// Messages in from the client:
+	// #1: messages in from the client (web page):
 	ws.on("message", (message) => {
 		console.log("received: %s", message);		// Not message.data.
-		maxAPI.outlet("generate");
+		maxAPI.outlet(message);
     });
 
 	// Clean up when client disconnects:
 	ws.on("close", () => {
-		maxAPI.removeHandlers("send");
 		console.log("Connection closed");
+		maxAPI.removeHandlers("colour");
+		maxAPI.removeHandlers("reload");
+		maxAPI.removeHandlers("release");
 		ws.terminate();
 	});
 	
-	// Connect up to Max here: [...]
-
+	// #2: colour message from Max can be sent through to web page.
 	// (Note: "colour" will be ignored until we get a client connection.)
 	maxAPI.addHandler("colour", (...args) => {
 		console.log("colour args: " + args);
@@ -50,6 +51,7 @@ wss.on("connection", (ws, req) => {		//	When the client connects...
 		}
 	});
 
+	// Not sure this one is practical.
 	maxAPI.addHandler("reload", (msec) => {
 		ws.send(JSON.stringify({
 			"type" : "reload",
@@ -57,6 +59,7 @@ wss.on("connection", (ws, req) => {		//	When the client connects...
 		}))
 	})
 	
+	// #4: release an audio file to the web.
 	maxAPI.addHandler("release", (filename) => {
 		ws.send(JSON.stringify({
 			"type" : "audiofile",
