@@ -24,7 +24,7 @@ const wss = new WebSocket.Server({ port: 7474 });
 wss.on("connection", (ws, req) => {		//	When the client connects...
 	// #1: messages in from the client (web page):
 	ws.on("message", (message) => {
-		console.log("received: %s", message);		// Not message.data.
+		console.log(`Received: ${message}`);		//	Not message.data.
 		maxAPI.outlet(message);
     });
 

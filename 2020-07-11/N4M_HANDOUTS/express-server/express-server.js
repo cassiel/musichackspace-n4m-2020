@@ -24,15 +24,15 @@ const wss = new WebSocket.Server({ port: 7474 });
 wss.on("connection", (ws, req) => {		//	When the client connects...
 	// Messages in from the client:
 	ws.on("message", (message) => {
-		console.log("received: %s", message);
+		console.log(`Received: ${message}`);
     });
 
 	// Clean up when client disconnects:
 	ws.on("close", () => {
-		maxAPI.removeHandlers("send");
+		// Remove any Max handlers
 		console.log("Connection closed");
 		ws.terminate();
 	});
 	
-	// Connect up to Max here: [...]
+	// Once we have "ws", connect up to Max here: [...]
 });
