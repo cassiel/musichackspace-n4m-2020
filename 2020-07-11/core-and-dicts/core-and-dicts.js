@@ -24,7 +24,7 @@ const end_of_transition = new Date(2021, 1, 1);
 
 maxAPI.addHandler("bang", () => {
     // 2. Libraries and dictionary output.
-    // IMPORTANT: dictionaries to and from JSON objects. 
+    // IMPORTANT: dictionaries to and from JSON objects.
     // Show this one in the terminal first:
     maxAPI.outlet("interval",
                   dfns.intervalToDuration({start: Date.now(), end: end_of_transition}));
